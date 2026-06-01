@@ -10,7 +10,7 @@
 set -e  # Stop on any error
 
 echo "======================================"
-echo "   AKOps CKA LAB AUTOMATION STARTING"
+echo "   AKOps Tamil CKA LAB AUTOMATION STARTING"
 echo "======================================"
 
 # -------------------------------
