@@ -116,12 +116,5 @@ Akops Tamil-cka-lab/
 
 ---
 
-## 🤝 Resources
-
-- [KodeKloud](https://kodekloud.com) — Best platform for CKA practice labs
-- [Killercoda](https://killercoda.com) — Free browser-based Kubernetes playground
-- [Kubernetes Docs](https://kubernetes.io/docs)
-
----
 
 *Made with ❤️ by Ajith | Akops Tamil*
