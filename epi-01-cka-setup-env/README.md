@@ -24,7 +24,7 @@ Open your **WSL terminal** and run:
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/<your-username>/Akops Tamil-cka-lab.git
+git clone https://github.com/madialagan-ajithkumara/akops-cka-lab.git
 cd Akops Tamil-cka-lab/epi-01-cka-setup-env
 
 # 2. Give execute permission
