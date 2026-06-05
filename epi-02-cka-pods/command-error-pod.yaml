@@ -1,0 +1,136 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"name":"command-error-pod","namespace":"default"},"spec":{"containers":[{"command":["sh","-c","sleeeep 3600"],"image":"busybox","name":"busybox"}]}}
+  creationTimestamp: "2026-06-02T16:05:07Z"
+  generation: 1
+  name: command-error-pod
+  namespace: default
+  resourceVersion: "55170"
+  uid: 960a65f0-24a4-4918-b839-f9f7ad79d382
+spec:
+  containers:
+  - command:
+    - sh
+    - -c
+    - sleep 3600
+    image: busybox
+    imagePullPolicy: Always
+    name: busybox
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-6kb52
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: cka-lab-m02
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-6kb52
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-06-02T16:05:18Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-06-02T16:05:07Z"
+    observedGeneration: 1
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-06-02T16:05:07Z"
+    message: 'containers with unready status: [busybox]'
+    observedGeneration: 1
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-06-02T16:05:07Z"
+    message: 'containers with unready status: [busybox]'
+    observedGeneration: 1
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-06-02T16:05:07Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://7d8c1453b95e54fb6ef95c0f47d27865e774084f42f4d3a5a75c46930e85dedc
+    image: busybox:latest
+    imageID: docker-pullable://busybox@sha256:fd8d9aa63ba2f0982b5304e1ee8d3b90a210bc1ffb5314d980eb6962f1a9715d
+    lastState:
+      terminated:
+        containerID: docker://db704719d8196023ecb55c11d6d4d81e39ba83a988dfcd639150b72b30f9331a
+        exitCode: 127
+        finishedAt: "2026-06-02T16:07:01Z"
+        reason: Error
+        startedAt: "2026-06-02T16:07:00Z"
+    name: busybox
+    ready: false
+    resources: {}
+    restartCount: 5
+    started: false
+    state:
+      terminated:
+        containerID: docker://7d8c1453b95e54fb6ef95c0f47d27865e774084f42f4d3a5a75c46930e85dedc
+        exitCode: 127
+        finishedAt: "2026-06-02T16:08:28Z"
+        reason: Error
+        startedAt: "2026-06-02T16:08:27Z"
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-6kb52
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 192.168.85.3
+  hostIPs:
+  - ip: 192.168.85.3
+  observedGeneration: 1
+  phase: Running
+  podIP: 10.244.1.7
+  podIPs:
+  - ip: 10.244.1.7
+  qosClass: BestEffort
+  startTime: "2026-06-02T16:05:07Z"
