@@ -1,6 +1,6 @@
 # 🚀 Akops Tamil CKA Lab — Episode 01: Setup Environment
 
-> **YouTube:** [Akops Tamil](https://youtube.com/@Akops Tamil) | **Language:** Tamil 🇮🇳  
+> **YouTube:** [Akops Tamil](https://youtube.com/@AkopsTamil) | **Language:** Tamil 🇮🇳  
 > **Topic:** CKA Exam Preparation — Local Kubernetes Lab Setup using Minikube
 
 ---
@@ -105,7 +105,7 @@ Akops Tamil-cka-lab/
 
 ## 📺 Watch the Full Video
 
-👉 [Episode 01 — CKA Lab Setup (Tamil)](https://youtube.com/@Akops Tamil)
+👉 [Episode 01 — CKA Lab Setup (Tamil)](https://youtube.com/@AkopsTamil)
 
 **Subscribe for more:**
 - ☸️ Kubernetes & CKA Prep
